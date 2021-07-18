@@ -1,0 +1,27 @@
+.sort-option {
+  height: 4rem;
+  background-color: #5b5b5b;
+  color: #f88b24;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 5px 5px rgba(91, 91, 91, 0.7);
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+li {
+  margin-left: 2rem;
+  padding-right: 2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-right: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+li:last-child {
+  border: none;
+}

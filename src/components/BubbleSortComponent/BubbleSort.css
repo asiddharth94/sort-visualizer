@@ -1,0 +1,10 @@
+.bubble-sort {
+  display: flex;
+  justify-content: center;
+}
+
+.array-bar {
+  width: 0.5rem;
+  background-color: royalblue;
+  margin: 0 1px;
+}
