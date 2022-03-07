@@ -13,18 +13,21 @@ function BubbleSort() {
     getArray();
   }, []);
 
-  function bubbleSort(bubbleArray) {
+  const bubbleSort = (bubbleArray) => {
     let sortedArray = [...bubbleArray];
     for (let i = 0; i < sortedArray.length; i++) {
       for (let j = 0; j < sortedArray.length - i - 1; j++) {
-        if (sortedArray[j] > sortedArray[j + 1]) {
-          let temp = sortedArray[j];
-          sortedArray[j] = sortedArray[j + 1];
-          sortedArray[j + 1] = temp;
-        }
+        setTimeout(() => {
+          if (sortedArray[j] > sortedArray[j + 1]) {
+            let temp = sortedArray[j];
+            sortedArray[j] = sortedArray[j + 1];
+            sortedArray[j + 1] = temp;
+          }
+          setBubbleArray([...sortedArray]);
+        }, 1000);
       }
     }
-  }
+  };
 
   const getArray = () => {
     const array = [];
@@ -36,13 +39,7 @@ function BubbleSort() {
 
   return (
     <div className="bubble-sort">
-      <button
-        onClick={() => {
-          bubbleSort(bubbleArray);
-        }}
-      >
-        SORT
-      </button>
+      <button onClick={() => bubbleSort(bubbleArray)}>SORT</button>
       {bubbleArray.map((elem, index) => (
         <div
           key={index}
